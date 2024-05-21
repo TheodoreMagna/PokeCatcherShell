@@ -180,6 +180,7 @@ def main():
     print("You have a full team !")
     save_team_in_pokedex(team, pokedex)
     print("The team got added to the pokedex !")
+    print("You now have " + str(len(pokedex)) + "/" + str(len(pokemons)) + " pokemons in your pokedex !")
 
 if __name__ == "__main__":
     main()
