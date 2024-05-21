@@ -26,7 +26,6 @@ except:
 #-------------------------
 # Pokemon Class
 #-------------------------
-
 class Pokemon():
     def __init__(self, name, shiny=False, level=1):
         self.name = name
@@ -55,10 +54,9 @@ class Pokemon():
             print("Shiny !")
         subprocess.run(args_list)
 
-########################################################################
+#-------------------------
 # Tools
-########################################################################
-
+#-------------------------
 def clear_terminal():
     subprocess.run("clear")
 
@@ -73,6 +71,9 @@ def show_team(team):
     print("=============================================================")
     input("Press Enter to continue...")
 
+#-------------------------
+# Game Loop
+#-------------------------
 def get_action(pokemon, team):
     clear_terminal()
     pokemon.show()
@@ -91,6 +92,9 @@ def get_action(pokemon, team):
             print("Invalid action")
     get_action(pokemon, team)
 
+#-------------------------
+# Main
+#-------------------------
 def main():
     team = []
 
