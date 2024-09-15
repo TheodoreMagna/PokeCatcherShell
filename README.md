@@ -16,3 +16,11 @@ This project is a game that allows you to catch pokemons in your shell. You will
 ```bash
 python3 main.py
 ```
+
+## Screenshots:
+### Wild Encounter
+![Wild Encounter](./screenshots/Screenshot1.png)
+
+### Your Team
+![Your Team](./screenshots/Screenshot2.png)
+![Your Team2](./screenshots/Screenshot3.png)
