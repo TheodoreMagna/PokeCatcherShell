@@ -4,6 +4,7 @@
 import subprocess
 from random import randint
 import json
+import signal
 
 #-------------------------
 # Config
@@ -161,7 +162,12 @@ def get_action(pokemon, team, pokedex):
 #-------------------------
 # Main
 #-------------------------
+def handle_sigint(signum, frame):
+    print("Exiting...")
+    exit(0)
+
 def main():
+    signal.signal(signal.SIGINT, handle_sigint)
     team = []
     try:
         pokedex = json.load(open("pokedex.json"))
