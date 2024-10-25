@@ -59,7 +59,7 @@ class Pokemon():
     def show(self):
         print("ID: " + str(self.id))
         print("Shiny: " + str(self.shiny))
-        print("LVL: " + str(self.level))
+        print("LVL: \033[91m" + str(self.level) + "\033[0m")
         args_list = ['krabby', 'name', self.name, '-i']
         if (self.shiny):
             args_list.append("-s")
@@ -95,7 +95,7 @@ def show_pokedex(pokedex):
     print("=============================================================")
     print("Your pokedex:")
     for poke_id, poke in pokedex.items():
-        print(str(poke_id) + " - " + poke["name"] + " - Level: " + str(poke["level"]) + " - Shiny: " + str(poke["shiny"]))
+        print(str(poke_id) + " - " + poke["name"] + " - Level: \033[91m" + str(poke["level"]) + "\033[0m" + " - Shiny: " + str(poke["shiny"]))
     print("=============================================================")
     print("=============================================================")
     temp = input("List of actions:\n- 1: Continue\n- 2: Show Pokemon\n")
